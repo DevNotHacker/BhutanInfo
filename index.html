@@ -16,10 +16,47 @@
       if (window.matchMedia('(prefers-color-scheme: dark)').matches === true) {
         document.body.style.backgroundColor = "black";
         document.body.style.color="white";
+        document.abuttonOn.style.color = "Blue";
+        document.abuttonOn.style.backgroundColor="Snow";
       } else {
         document.body.style.backgroundColor = "white";
         document.body.style.color = "black";
       }
+      function goTo(website) {
+        location.assign(website)
+      }
     </script>
+    <!--Style element-->
+    <style>
+      #ButtonsTop {
+        text-align:justify;
+        min-width:45em;
+        padding: 1.2em 1em 0;
+        box-shadow:0 0 5px;
+        margin:1em;
+        border-radius:0.25em;
+        background-color: Navy;
+      }
+      #ButtonsTop:after {
+        content:'';
+        display:inline-block;
+        width:99.5%;
+      }
+      .abutton {
+        display: inline;
+        color: Snow;
+        background-color: SaddleBrown;
+      }
+      #abuttonOn {
+        display: inline;
+        color: Snow;
+        background-color: Blue;
+      }
+    </style>
+    <div id="ButtonsTop">
+      <button onclick="goTo('/home.html')" id="abuttonOn">Home</button>
+      <button onclick="goTo('/aboutus.html')" class="abutton">About Us</button>
+      <button onclick="goTo('/why.html')" class="abutton">Why</button>
+    </div>  
   </body>
 </html>
