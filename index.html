@@ -6,32 +6,6 @@
   </head>
   <body>
     <center><h1><em>Info on Bhutan</em></h1></center>
-    <script>
-      try {
-        console.log(matchMedia)
-        console.clear()
-      } catch {
-        console.error("matchMedia does not exist.")
-      }
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches === true) {
-        document.body.style.backgroundColor = "black";
-        document.body.style.color="white";
-        document.abuttonOn.style.color = "Green";
-        document.abuttonOn.style.backgroundColor="Snow";
-        document.abutton.style.color="SaddleBrown";
-        document.abutton.style.backgroundColor="Snow";
-      } else {
-        document.body.style.backgroundColor = "white";
-        document.body.style.color = "black";
-        document.abuttonOn.style.backgroundColor="Green";
-        document.abuttonOn.style.color="Snow";
-        document.abutton.style.color="Snow";
-        document.abutton.style.backgroundColor="SaddleBrown";
-      }
-      function goTo(website) {
-        location.assign(website)
-      }
-    </script>
     <!--Style element-->
     <style>
       #ButtonsTop {
@@ -56,7 +30,7 @@
       #abuttonOn {
         display: inline;
         color: Snow;
-        background-color: Blue;
+        background-color: Green;
       }
     </style>
     <div id="ButtonsTop">
@@ -65,5 +39,42 @@
       <button onclick="goTo('/why.html')" class="abutton">Why</button>
       <button onclick="goTo('/info.html')" class="abutton">Info on Bhutan</button>
     </div>  
+    <script>
+      try {
+        console.log(matchMedia)
+        console.clear()
+      } catch {
+        console.error("matchMedia does not exist.")
+      }
+      var abuttonOnn = document.getElementById("abuttonOn");
+      console.log(abuttonOnn)
+      var abuttonn = document.getElementsByClassName('abutton')
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches === true) {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color="white";
+        for (var i = 0; i < abuttonn.length; i++) {
+          abuttonn[i].style.color = 'SaddleBrown';
+        }
+        for (var i = 0; i < abuttonn.length; i++) {
+          abuttonn[i].style.backgroundColor = 'Snow';
+        }
+        abuttonOnn.style.color = "Green";
+        abuttonOnn.style.backgroundColor="SkyBlue";
+      } else {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        for (var i = 0; i < abuttonn.length; i++) {
+          abuttonn[i].style.color = 'Snow';
+        }
+        for (var i = 0; i < abuttonn.length; i++) {
+          abuttonn[i].style.backgroundColor = 'SaddleBrown';
+        }
+        abuttonOnn.style.backgroundColor="Green";
+        abuttonOnn.style.color="SkyBlue";
+      }
+      function goTo(website) {
+        location.assign(website)
+      }
+    </script>
   </body>
 </html>
