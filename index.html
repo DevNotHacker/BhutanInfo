@@ -41,6 +41,7 @@
         display: block;
         margin: auto;
         padding: 20px
+        color: black;
       }
       .toInfoButton {
         background-color: #04AA6D;
@@ -52,6 +53,7 @@
         font-size: 16px;
         margin: 4px 2px;
         border-radius: 12px;
+        color: black;
       }
       .toInfoButton:hover {
         cursor: pointer;
@@ -63,6 +65,10 @@
       <button onclick="goTo('/why.html')" class="abutton">How to Help</button>
       <button onclick="goTo('/info.html')" class="abutton">Info on Bhutan</button>
     </div>  
+    <center><div id="InfoBhutan">
+      <br><br><br><br><br><center><h1 style="color: 'black'" id="bruh">8.2% of people in Bhutan are <strong style="color: 'green'">below</strong> the national poverty line.</h1></center><br>
+      <center><button class="toInfoButton" onclick="goTo('/info.html')">More Info  ▷</button></center><br><br>
+    </div></center>
     <script>
       try {
         console.log(matchMedia)
@@ -99,10 +105,7 @@
       function goTo(website) {
         location.assign(website)
       }
+      document.getElementById("bruh").style.color = "black"
     </script>
-    <center><div id="InfoBhutan">
-      <br><br><br><br><br><center><h1>8.2% of people in Bhutan are <strong style="color: 'green'">below</strong> the national poverty line.</h1></center><br>
-      <center><button class="toInfoButton" onclick="goTo('/info.html')">More Info  ▷</button></center><br><br>
-    </div></center>
   </body>
 </html>
