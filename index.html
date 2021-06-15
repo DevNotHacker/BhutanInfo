@@ -58,6 +58,13 @@
       .toInfoButton:hover {
         cursor: pointer;
       }
+      .striped-border { border: 1px dashed #000; width: 75%; margin: auto; margin-top: 5%; margin-bottom: 5%; }
+      .smalltext {
+        font-size: 6px;
+      }
+      .supersmalltext {
+        font-size: 4px;
+      }
     </style>
     <div id="ButtonsTop">
       <button onclick="goTo('/index.html')" id="abuttonOn">Home</button>
@@ -69,6 +76,10 @@
       <br><br><br><br><br><center><h1 style="color: 'black'" id="bruh">11.2% of people in bhutan earn <strong style="color: 'green'">less</strong> than 3.20 USD per hour.</h1></center><br>
       <center><button class="toInfoButton" onclick="goTo('/info.html')">More Info  ▷</button></center><br><br>
     </div></center>
+    <hr class="striped-border">
+    <center><h1>Thanks to people like normal people like you,</h1><img src="Images/bhutanpovertydecrease.jpg" alt="Bhutan graph showing decrease in poverty"><h1 class="smalltext">Src: <a href="https://thebhutanese.bt/wp-content/uploads/2017/12/small-500x330.jpg" class="supersmalltext" target="_blank"> https://thebhutanese.bt/wp-content/uploads/2017/12/small-500x330.jpg</a></h1><h2>Bhutan's poverty rate is slowly decreasing.</h1></center>
+    <center><h1><strong><em>You Can Change Lives.</em></strong></h1></center>
+    <center><button class="toInfoButton" onclick="goTo('/why.html')">Learn How</button></center>
     <script>
       try {
         console.log(matchMedia)
@@ -79,6 +90,7 @@
       var abuttonOnn = document.getElementById("abuttonOn");
       console.log(abuttonOnn)
       var abuttonn = document.getElementsByClassName('abutton')
+      var hrthing = document.getElementsByClassName('striped-border')
       if (window.matchMedia('(prefers-color-scheme: dark)').matches === true) {
         document.body.style.backgroundColor = "black";
         document.body.style.color="white";
@@ -90,6 +102,9 @@
         }
         abuttonOnn.style.color = "Green";
         abuttonOnn.style.backgroundColor="SkyBlue";
+        for (var i = 0; i < hrthing.length; i++) {
+          hrthing[i].style.border = "1px dashed #FFFFFF";
+        }
       } else {
         document.body.style.backgroundColor = "white";
         document.body.style.color = "black";
@@ -101,6 +116,9 @@
         }
         abuttonOnn.style.backgroundColor="Green";
         abuttonOnn.style.color="SkyBlue";
+        for (var i = 0; i < hrthing.length; i++) {
+          hrthing[i].style.border = "1px dashed #000";
+        }
       }
       function goTo(website) {
         location.assign(website)
