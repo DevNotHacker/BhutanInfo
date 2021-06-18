@@ -2,8 +2,103 @@
 <html lang="en">
   <head>
     <meta http-equiv="refresh" content="100">
-    <title>About Us</title>
+    <title>Info</title>
+    <link rel="icon" type="image/png" href="Images/haha1.png">
   </head>
   <body>
+    <style>
+      #ButtonsTop {
+        text-align:justify;
+        min-width:45em;
+        padding: 1.2em 1em 0;
+        box-shadow:0 0 5px;
+        margin:1em;
+        border-radius:0.25em;
+        background-color: Navy;
+      }
+      #ButtonsTop:after {
+        content:'';
+        display:inline-block;
+        width:99.5%;
+      }
+      .abutton {
+        display: inline;
+        color: Snow;
+        background-color: SaddleBrown;
+      }
+      #abuttonOn {
+        display: inline;
+        color: Snow;
+        background-color: Green;
+      }
+      .striped-border { border: 1px dashed #000; width: 50%; margin: auto; margin-top: 5%; margin-bottom: 5%;
+    </style>
+    <center><h1><em>Info on Bhutan</em></h1></center>
+    <div id="ButtonsTop">
+      <button onclick="goTo('/index.html')" class="abutton">Home</button>
+      <button onclick="goTo('/aboutus.html')" id="abuttonOn">About Us</button>
+      <button onclick="goTo('/why.html')" class="abutton">How to Help</button>
+      <button onclick="goTo('/info.html')" class="abutton">Info on Bhutan</button>
+    </div>
+    <center><a href="#why">Why</a><br><a href="#who">Who</a></center>
+    <div id="why">  
+      <center><h1>Why</h1></center><hr class="striped-border">
+      <center><h2>There is a big issue in Bhutan. Bhutan has a very high poverty rate, and I want to fix that. Zero Poverty is the first goal in global goals, which you can check out at <a href="https://www.globalgoals.org/1-no-poverty" target="_blank">this website</a>. </h2></center>
+      <center><h3>It is one thing to think of ideas, like making a website, but it is another to actually do the idea, and in this example, actually make this website. I wanted to be one person who actually did my idea, and try to change the world. If this problem is not solved, children and adults will be in poverty, and no one deserves to be in poverty. Most people in bhutan who are in poverty are just unfortunate, like having a flood destroy their home.</h3></center>
+      <center><h3>I can make a website, so I decided to make a website, to spread awareness. There are many people who know the global goals, and some that try to help contribute to achieving the global goals. There is not enough, so I wanted to spread awareness, and hopefully, there will not be that much poverty in Bhutan.</h3></center>
+      <center><h3>I think that I am making an impact on spreading awareness. I have also donated around 30$ to heifer organization. Do you have Edge? If so, go to the top right corner and press this: <img src="Images/bruh.jpg" alt="image of the button">. Then, turn on switch on give mode, and donate to one of the charities. Go to <a href="https://povertyinbhutan.cookiesnowowl.repl.co/info.html#donate" target="_blank">this place</a> to see all the organizations willing to stop poverty. </h3></center>
+    </div>
+    <br><br>
+    <div id="who">
+      <center><h1>Who am I?</h1></center><hr class="striped-border">
+      <center><h2>I am a middle schooler who wants to help reduce poverty in Bhutan.</h2></center>
+      <center><h3>I am a person who also wants to spread awareness, increasing the number of people who, like me, want to help.</h3></center>
+    </div><hr class="striped-border">
+    <center><h6>Sources: <br>None</h6></center>
+    <center><a href="#">Back to Top</a></center>
+    <script>
+      var abuttonOnn = document.getElementById("abuttonOn");
+      console.log(abuttonOnn)
+      var abuttonn = document.getElementsByClassName('abutton')
+      var hrthing = document.getElementsByClassName("striped-border")
+      try {
+        console.log(matchMedia)
+        console.clear()
+      } catch {
+        console.error("matchMedia does not exist.")
+      }
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches === true) {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color="white";
+        for (var i = 0; i < abuttonn.length; i++) {
+          abuttonn[i].style.color = 'SaddleBrown';
+        }
+        for (var i = 0; i < abuttonn.length; i++) {
+          abuttonn[i].style.backgroundColor = 'Snow';
+        }
+        abuttonOnn.style.color = "Green";
+        abuttonOnn.style.backgroundColor="SkyBlue";
+        for (var i = 0; i < hrthing.length; i++) {
+          hrthing[i].style.border = "1px dashed #FFFFFF";
+        }
+      } else {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        for (var i = 0; i < abuttonn.length; i++) {
+          abuttonn[i].style.color = 'Snow';
+        }
+        for (var i = 0; i < abuttonn.length; i++) {
+          abuttonn[i].style.backgroundColor = 'SaddleBrown';
+        }
+        abuttonOnn.style.backgroundColor="Green";
+        abuttonOnn.style.color="SkyBlue";
+        for (var i = 0; i < hrthing.length; i++) {
+          hrthing[i].style.border = "1px dashed #000";
+        }
+      }
+      function goTo(website) {
+        location.assign(website)
+      }
+    </script>
   </body>
 </html>
